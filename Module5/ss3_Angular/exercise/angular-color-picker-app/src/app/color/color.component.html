@@ -1,0 +1,20 @@
+<h1>Color Picker</h1>
+<button (click)="changeColor('orange')" style="background-color: orange;width:50px;height:50px" value="orange"></button>
+<button (click)="changeColor('red')" style="background-color: red;width:50px;height:50px" value="red"></button>
+<button (click)="changeColor('blue')" style="background-color: blue;width:50px;height:50px" value="blue"></button>
+<button (click)="changeColor('yellow')" style="background-color: yellow;width:50px;height:50px" value="yellow"></button>
+<button (click)="changeColor('violet')" style="background-color: violet;width:50px;height:50px" value="violet"></button>
+<div [style]="{color}" style="width: 50%;height: 100px">
+  <h2>Color: {{color}}</h2>
+</div>
+
+<h1>Color Picker</h1>
+<button (click)="checkChoice('orange')" style="background-color: orange;width:50px;height:50px" value="orange"></button>
+<button (click)="checkChoice('red')" style="background-color: red;width:50px;height:50px" value="red"></button>
+<button (click)="checkChoice('blue')" style="background-color: blue;width:50px;height:50px" value="blue"></button>
+<button (click)="checkChoice('yellow')" style="background-color: yellow;width:50px;height:50px" value="yellow"></button>
+<button (click)="checkChoice('violet')" style="background-color: violet;width:50px;height:50px" value="violet"></button>
+<div [style]="bgColor" style="width: 50%;height: 100px">
+  <h2>{{bgColor}}</h2>
+</div>
+

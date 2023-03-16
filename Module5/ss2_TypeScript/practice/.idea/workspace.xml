@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="350620e3-6f17-4741-9b89-9812337f8570" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/src/main/java/com/example/furama/FuramaApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/src/main/java/com/example/furama/ServletInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/src/main/java/com/example/furama/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/src/main/java/com/example/furama/dto/UserDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/src/main/java/com/example/furama/model/AttachService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/src/main/java/com/example/furama/model/Contract.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/src/main/java/com/example/furama/model/ContractDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/src/main/java/com/example/furama/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/src/main/java/com/example/furama/model/CustomerType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/src/main/java/com/example/furama/model/Division.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/src/main/java/com/example/furama/model/EducationDegree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/src/main/java/com/example/furama/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/src/main/java/com/example/furama/model/Position.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/src/main/java/com/example/furama/model/RentType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/src/main/java/com/example/furama/model/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/src/main/java/com/example/furama/model/Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/src/main/java/com/example/furama/model/ServiceType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/src/main/java/com/example/furama/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/src/main/java/com/example/furama/util/EncrypPasswordUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/src/main/java/com/example/furama/util/WebUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/src/main/resources/templates/home/403.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/src/main/resources/templates/home/admin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/src/main/resources/templates/home/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/src/main/resources/templates/home/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/src/main/resources/templates/home/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/src/main/resources/templates/layout/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/src/main/resources/templates/layout/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/src/main/resources/templates/layout/navbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/CaseStudy/furama/src/test/java/com/example/furama/FuramaApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/ss12_ jQuery_AJAX/practice/phone-management/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/ss12_ jQuery_AJAX/practice/phone-management/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/ss12_ jQuery_AJAX/practice/phone-management/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/ss12_ jQuery_AJAX/practice/phone-management/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/ss12_ jQuery_AJAX/practice/phone-management/src/main/java/com/example/phonemanagement/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/ss12_ jQuery_AJAX/practice/phone-management/src/main/java/com/example/phonemanagement/controller/SmartphoneController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/ss12_ jQuery_AJAX/practice/phone-management/src/main/java/com/example/phonemanagement/model/Smartphone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/ss12_ jQuery_AJAX/practice/phone-management/src/main/java/com/example/phonemanagement/repository/ISmartphoneRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/ss12_ jQuery_AJAX/practice/phone-management/src/main/java/com/example/phonemanagement/service/ISmartphoneService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/ss12_ jQuery_AJAX/practice/phone-management/src/main/java/com/example/phonemanagement/service/SmartphoneService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/ss12_ jQuery_AJAX/practice/phone-management/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Module 4/ss12_ jQuery_AJAX/practice/phone-management/src/main/resources/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module 4/demo/demo_security" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module 4/demo/demo_security" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module 4/ss5_ORM/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module 4/ss5_ORM/practice/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module 4/ss7_Spring_Data_Repository/exercise/blog/src/main/java/com/example/blog/controller/RestBlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module 4/ss7_Spring_Data_Repository/exercise/blog/src/main/java/com/example/blog/controller/RestBlogController.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2DU9iyjZGi9xPxu94UrtDNlaaRy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="350620e3-6f17-4741-9b89-9812337f8570" name="Changes" comment="" />
+      <created>1660742926822</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1660742926822</updated>
+      <workItem from="1660742928019" duration="106000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
