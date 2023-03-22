@@ -1,0 +1,64 @@
+<div class="container-fluid">
+  <div class="col-md-6">
+    <form [formGroup]="accountForm" (ngSubmit)="createAccount()">
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" formControlName="email">
+        <div class="text-warning"
+             *ngIf="accountForm.hasError('emailError',['email']) && accountForm.get('email')?.touched">
+          Invalid
+        </div>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div formGroupName="password">
+        <div class="form-group">
+          <label for="pass">Password</label>
+          <input type="password" class="form-control" id="pass" formControlName="pass">
+        </div>
+        <div class="form-group">
+          <label for="confirmPass">Confirm password</label>
+          <input type="password" class="form-control" id="confirmPass" formControlName="confirmPass">
+        </div>
+        <div class="text-warning" *ngIf="accountForm.hasError('passwordNotMatch',['password'])">Password does not match
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Country</label>
+        <select formControlName="country">
+          <option value="">Select</option>
+          <option *ngFor="let country of countries" value="{{country}}">{{country}}</option>
+        </select>
+        <div class="text-warning" *ngIf="accountForm.get('country')?.invalid && accountForm.get('country')?.touched">
+          Country is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="text" class="form-control" id="age" formControlName="age">
+        <div class="text-warning" *ngIf="accountForm.get('age')?.invalid && accountForm.get('age')?.touched">
+          Age must older than 18
+        </div>
+      </div>
+      <div class="form-group">
+        <div>
+          <p>Gender</p>
+          <input type="radio" name="gender" formControlName="gender" value="1">Male
+          <input type="radio" name="gender" formControlName="gender" value="0">Female
+        </div>
+        <div class="text-warning" *ngIf="accountForm.get('gender')?.invalid && accountForm.get('gender')?.touched">
+          Gender is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="text" class="form-control" id="phone" formControlName="phone">
+        <div class="text-warning" *ngIf="accountForm.get('phone')?.invalid && accountForm.get('phone')?.touched">
+          Invalid phone
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="!accountForm.valid">Submit</button>
+    </form>
+  </div>
+</div>
+
+
