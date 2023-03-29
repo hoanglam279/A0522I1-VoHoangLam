@@ -1,0 +1,19 @@
+<div class="container">
+  <h3>Dictionary</h3>
+  <table class="table">
+    <thead>
+    <tr>
+      <td>#</td>
+      <td>Word</td>
+      <td>Detail</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let record of dictionaries; index as i">
+      <td>{{i}}</td>
+      <td>{{record.word}}</td>
+      <td><a routerLink="/detail/{{record.word}}">Detail</a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

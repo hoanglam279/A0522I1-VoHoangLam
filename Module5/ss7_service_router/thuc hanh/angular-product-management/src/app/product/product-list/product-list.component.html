@@ -1,0 +1,60 @@
+<h1>Danh sách sản phẩm</h1>
+<a routerLink="/product/create" class="btn btn-outline-dark">Thêm sản phẩm mới</a>
+<br><br>
+<div>
+<table class="table table-striped">
+  <tr>
+    <td>Mã sản phẩm</td>
+    <td>Tên</td>
+    <td>Giá</td>
+    <td>Mô tả</td>
+    <td>Chỉnh sửa</td>
+    <td>Xóa</td>
+  </tr>
+  <tr *ngFor="let product of products | paginate: config">
+    <td>{{product.id}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.price}}</td>
+    <td>{{product.description}}</td>
+    <td><a class="btn btn-outline-dark" [routerLink]="['/product/edit', product.id]">Sửa</a></td>
+    <td><a class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#delModal" (click)="delModal(product)">Xóa</a></td>
+  </tr>
+</table>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="delModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Xác nhận xóa sản phẩm</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+          <tr>
+            <td>Mã sản phẩm:</td>
+            <td>{{deleteProduct.id}}</td>
+          </tr>
+          <tr>
+            <td>Tên:</td>
+            <td>{{deleteProduct.name}}</td>
+          </tr>
+          <tr>
+            <td>Giá:</td>
+            <td>{{deleteProduct.price}}</td>
+          </tr>
+          <tr>
+            <td>Mô tả:</td>
+            <td>{{deleteProduct.description}}</td>
+          </tr>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+        <button type="button" class="btn btn-primary" (click)="delProduct()" data-bs-dismiss="modal">Xóa</button>
+      </div>
+    </div>
+  </div>
+</div>
+<pagination-controls (pageChange)="pageChanged($event)" previousLabel="Trang trước" nextLabel="Trang sau"></pagination-controls>
