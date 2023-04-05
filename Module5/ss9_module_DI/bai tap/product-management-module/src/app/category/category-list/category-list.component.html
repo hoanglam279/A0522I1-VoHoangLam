@@ -1,0 +1,50 @@
+<h1>Danh sách danh mục</h1>
+<a routerLink="/category/create" class="btn btn-outline-dark">Thêm danh mục mới</a>
+<br><br>
+<div>
+  <input type="text" placeholder="Input to search" [formControl]="searchForm" (keydown.enter)="search()">
+</div>
+<div>
+  <table class="table table-striped">
+    <tr>
+      <td>Mã danh mục</td>
+      <td>Tên</td>
+      <td>Chỉnh sửa</td>
+      <td>Xóa</td>
+    </tr>
+    <tr *ngFor="let category of categories">
+      <td>{{category.id}}</td>
+      <td>{{category.name}}</td>
+      <td><a class="btn btn-outline-dark" [routerLink]="['/category/edit', category.id]">Sửa</a></td>
+      <td><a class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#delModal" (click)="delModal(category)">Xóa</a></td>
+    </tr>
+  </table>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="delModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Xác nhận xóa danh mục</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <table class="table">
+          <tr>
+            <td>Mã danh mục:</td>
+            <td>{{deleteCategory.id}}</td>
+          </tr>
+          <tr>
+            <td>Tên:</td>
+            <td>{{deleteCategory.name}}</td>
+          </tr>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+        <button type="button" class="btn btn-primary" (click)="delCategory()" data-bs-dismiss="modal">Xóa</button>
+      </div>
+    </div>
+  </div>
+</div>

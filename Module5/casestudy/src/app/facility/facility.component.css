@@ -1,0 +1,11 @@
+.card-hover:hover{
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px #8cb4b1;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+

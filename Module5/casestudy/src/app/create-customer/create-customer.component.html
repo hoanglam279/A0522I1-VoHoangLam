@@ -1,0 +1,47 @@
+<div>
+  <h1>Thêm mới khách hàng</h1>
+  <div>
+    <form [formGroup]="customerForm" (ngSubmit)="submit()">
+      <div class="col-md-6">
+        <label class="form-label"  >Id</label>
+        <input type="text" class="form-control" formControlName="customerId" >
+      </div>
+      <div class="col-md-6">
+        <label class="form-label"  >Type</label>
+        <input type="text" class="form-control" formControlName="customerType" >
+      </div>
+      <div class="col-md-6">
+        <label class="form-label"  >Name</label>
+        <input type="text" class="form-control" formControlName="name" >
+      </div>
+      <div class="col-md-6">
+        <label class="form-label"  >Birthday</label>
+        <input type="date" class="form-control" formControlName="birthday">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label"  >Gender</label>
+        <input type="text" class="form-control" formControlName="gender">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label"  >Id card</label>
+        <input type="text" class="form-control" formControlName="idCard">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label"  >Phone</label>
+        <input type="text" class="form-control" formControlName="phone">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label"  >Email</label>
+        <input type="text" class="form-control" formControlName="email">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label"  >Address</label>
+        <input type="text" class="form-control" formControlName="address">
+      </div>
+      <br><br>
+      <div>
+        <button type="submit" class="btn btn-primary" [disabled]="customerForm.invalid">Thêm mới khách hàng</button>
+      </div>
+    </form>
+  </div>
+</div>

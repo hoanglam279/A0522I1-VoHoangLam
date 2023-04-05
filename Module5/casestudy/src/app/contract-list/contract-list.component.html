@@ -1,0 +1,28 @@
+<!-- Contract list -->
+<table class="table table-striped table-light">
+  <tr>
+    <th>Mã hợp đồng</th>
+    <th>Ngày bắt đầu</th>
+    <th>Ngày kết thúc</th>
+    <th>Đặt cọc</th>
+    <th>Tổng tiền</th>
+    <th>Khách hàng</th>
+    <th>Nhân viên</th>
+    <th>Dịch vụ</th>
+    <th>Sửa</th>
+    <th>Xóa</th>
+  </tr>
+  <tr *ngFor="let contract of contracts">
+    <td>{{contract.contractId}}</td>
+    <td>{{contract.startDate}}</td>
+    <td>{{contract.endDate}}</td>
+    <td>{{contract.deposit}}</td>
+    <td>{{contract.totalMoney}}</td>
+    <td>{{contract.customer}}</td>
+    <td>{{contract.employee}}</td>
+    <td>{{contract.service}}</td>
+    <td><a class="btn btn-outline-dark">Sửa</a></td>
+    <td><a class="btn btn-outline-dark">Xóa</a></td>
+  </tr>
+</table>
+<!-- End contract list -->

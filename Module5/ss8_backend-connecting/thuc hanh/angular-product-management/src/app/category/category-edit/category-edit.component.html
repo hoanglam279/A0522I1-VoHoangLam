@@ -1,0 +1,18 @@
+<h1>Chỉnh sửa sản phẩm</h1>
+<form [formGroup]="categoryForm" (ngSubmit)="editCategory()">
+  <table>
+    <tr>
+      <td>Mã danh mục:</td>
+      <td><input type="number" formControlName="id" readonly disabled></td>
+    </tr>
+    <tr>
+      <td>Tên danh mục:</td>
+      <td><input type="text" formControlName="name"></td>
+    </tr>
+    <tr>
+      <td><a class="btn btn-outline-dark" routerLink="/category/list">Quay lại danh sách</a></td>
+      <td><button class="btn btn-outline-dark">Sửa</button></td>
+    </tr>
+  </table>
+</form>
+

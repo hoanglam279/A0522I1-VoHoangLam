@@ -1,0 +1,47 @@
+<div>
+  <h1>Thêm mới khách hàng</h1>
+  <div>
+    <form [formGroup]="contractForm" (ngSubmit)="submit()">
+      <div class="col-md-6">
+        <label class="form-label"  >Id</label>
+        <input type="text" class="form-control" formControlName="contractId" >
+      </div>
+      <div class="col-md-6">
+        <label class="form-label"  >Start date</label>
+        <input type="date" class="form-control" formControlName="startDate" >
+      </div>
+      <div class="col-md-6">
+        <label class="form-label"  >End date</label>
+        <input type="date" class="form-control" formControlName="endDate" >
+      </div>
+      <div class="col-md-6">
+        <label class="form-label"  >Deposit</label>
+        <input type="text" class="form-control" formControlName="deposit">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label"  >Gender</label>
+        <input type="text" class="form-control" formControlName="gender">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label"  >Total</label>
+        <input type="text" class="form-control" formControlName="totalMoney">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label"  >Employee</label>
+        <input type="text" class="form-control" formControlName="employee">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label"  >Customer</label>
+        <input type="text" class="form-control" formControlName="customer">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label"  >Service</label>
+        <input type="text" class="form-control" formControlName="service">
+      </div>
+      <br><br>
+      <div>
+        <button type="submit" class="btn btn-primary" [disabled]="contractForm.invalid">Thêm mới khách hàng</button>
+      </div>
+    </form>
+  </div>
+</div>

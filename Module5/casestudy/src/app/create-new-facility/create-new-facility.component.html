@@ -1,0 +1,55 @@
+<div>
+  <h1>Thêm mới dịch vụ</h1>
+  <div>
+    <form [formGroup]="facilityForm" (ngSubmit)="submit()">
+      <div class="col-md-6">
+        <label class="form-label">Id</label>
+        <input type="text" class="form-control" formControlName="facilityId" >
+      </div>
+      <div class="col-md-6">
+        <label class="form-label" >Name</label>
+        <input type="text" class="form-control" formControlName="facilityName" >
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Area</label>
+        <input type="text" class="form-control"  formControlName="area">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Cost</label>
+        <input type="text" class="form-control" formControlName="cost" >
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Max people</label>
+        <input type="text" class="form-control" formControlName="maxPeople" >
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Standard</label>
+        <input type="text" class="form-control" formControlName="standardRoom" >
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Description</label>
+        <input type="text" class="form-control" formControlName="description" >
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Pool area</label>
+        <input type="text" class="form-control" formControlName="poolArea" >
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Floors</label>
+        <input type="text" class="form-control" formControlName="numberOfFloors" >
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Rent type</label>
+        <input type="text" class="form-control" formControlName="rentType" >
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Facility type</label>
+        <input type="text" class="form-control" formControlName="facilityType" >
+      </div>
+      <br><br>
+      <div>
+        <button type="submit" class="btn btn-primary" [disabled]="facilityForm.invalid">Thêm mới dịch vụ</button>
+      </div>
+    </form>
+  </div>
+</div>

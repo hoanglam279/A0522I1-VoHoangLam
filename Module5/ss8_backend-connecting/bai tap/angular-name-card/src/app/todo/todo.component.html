@@ -1,0 +1,18 @@
+<h2 class="text-center">Todo app</h2>
+<div class="col-md-8 offset-md-2">
+  <a routerLink="/task-create" class="btn btn-outline-dark">Create new task</a>
+  <table class="table table-striped">
+    <tr>
+      <th>Task</th>
+      <th>Status</th>
+      <th colspan="2">Action</th>
+    </tr>
+    <tr *ngFor="let task of todos">
+      <td>{{task.content}}</td>
+      <td *ngIf="!task.complete">Pending</td>
+      <td *ngIf="task.complete">Done</td>
+      <td><a (click)="delete(task.id)" class="btn btn-outline-dark">Done</a></td>
+      <td><a [routerLink]="['/task-edit',task.id]" class="btn btn-outline-dark">Edit task</a></td>
+    </tr>
+  </table>
+</div>

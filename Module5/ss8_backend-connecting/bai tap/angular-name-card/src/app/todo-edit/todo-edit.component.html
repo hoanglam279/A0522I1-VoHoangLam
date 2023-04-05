@@ -1,0 +1,18 @@
+<h2 class="text-center">Edit new task</h2>
+<div class="col-md-8 offset-md-2">
+  <form [formGroup]="taskForm" (ngSubmit)="editTask()">
+    Id:
+    <input type="text" formControlName="id" disabled>
+    <br/>
+    Status:
+    <select formControlName="complete">
+      <option value="1">Done</option>
+      <option value="0">Pending</option>
+    </select>
+    <br/>
+    Edit task:
+    <input type="text" formControlName="content">
+    <br>
+    <button class="btn btn-outline-dark" type="submit">Edit</button>
+  </form>
+</div>
