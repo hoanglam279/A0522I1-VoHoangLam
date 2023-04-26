@@ -1,0 +1,38 @@
+<h1 style="text-align: center; color: lightseagreen; margin-top: 20px">Danh Sach Xe</h1>
+<table class="table table-hover" style="margin-top: 20px">
+  <thead style="background: lightseagreen">
+  <tr>
+    <th scope="col">So xe</th>
+    <th scope="col">Loai xe</th>
+    <th scope="col">Ten nha xe</th>
+    <th scope="col">Diem di</th>
+    <th scope="col">Diem den</th>
+    <th scope="col">SDT</th>
+    <th scope="col">Email</th>
+    <th scope="col">Gio di</th>
+    <th scope="col">Gio den</th>
+    <th scope="col">Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let car of cars | paginate: { itemsPerPage: 5, currentPage: p }| filter: data">
+    <td scope="row">{{car.id}}</td>
+    <td scope="row">{{car.typeCar}}</td>
+    <td scope="row">{{car.garageName | titlecase}}</td>
+    <td scope="row">{{car.starLocation}}</td>
+    <td scope="row">{{car.endLocation}}</td>
+    <td scope="row">{{car.phone}}</td>
+    <td scope="row">{{car.email}}</td>
+    <td scope="row">{{car.startTime}}</td>
+    <td scope="row">{{car.endTime}}</td>
+    <td>
+      <a (click)="openDialogDelete(car.id)" type="button" class="btn btn-danger">
+        Delete
+      </a>
+      <a style="margin-left: 10px" type="button" class="btn btn-warning" routerLink="edit/{{car.id}}">Edit</a>
+    </td>
+  </tr>
+  <tbody>
+</table>
+
+

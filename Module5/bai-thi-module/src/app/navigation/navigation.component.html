@@ -1,0 +1,34 @@
+<!--++++++++++++navbar top++++++++++++++++++-->
+<div class="sticky-top" style="background: #046056">
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="navbar-brand nav-link text-light pl-5 click" routerLink="">Home</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav mr-auto">
+
+          <li class="nav-item dropdown">
+            <a class="navbar-brand nav-link text-light pl-5 click dropdown-toggle" routerLink=""
+               role="button" data-toggle="dropdown" aria-expanded="false">
+              Package
+            </a>
+            <div class="dropdown-menu ml-5" style="background: #addccf">
+              <a style="background: #addccf" class="dropdown-item" routerLink="">Package List</a>
+              <hr>
+              <a style="background: #addccf" class="dropdown-item" routerLink="/package/create">Create Package</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>

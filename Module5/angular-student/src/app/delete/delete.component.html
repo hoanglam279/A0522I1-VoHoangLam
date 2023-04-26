@@ -1,0 +1,9 @@
+<h2>Delete</h2>
+<hr>
+<p>Bạn có đồng ý xóa thông tin của xe khách
+  <span class="text-danger">{{nameD}} co so xe {{idD}}</span> ?</p>
+<span style="color: red;">Lưu ý: Thao tác này không thể hoàn tác.</span>
+<div class="row d-flex justify-content-end">
+  <button mat-dialog-close class="btn btn-secondary">Close</button>
+  <button style="margin-left: 20px" class="btn btn-success" (click)="delete()">Yes</button>
+</div>

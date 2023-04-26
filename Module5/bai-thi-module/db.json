@@ -1,0 +1,168 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "sting",
+      "address": "Da Nang",
+      "cost": 1000,
+      "currency": "Thung"
+    },
+    {
+      "id": 2,
+      "name": "7up",
+      "address": "Da Nang",
+      "cost": 2000,
+      "currency": "Chai"
+    },
+    {
+      "id": 3,
+      "name": "red bull",
+      "address": "Quang Nam",
+      "cost": 3000,
+      "currency": "Thung"
+    },
+    {
+      "id": 4,
+      "name": "clear",
+      "address": "Da Nang",
+      "cost": 2000,
+      "currency": "Chai"
+    },
+    {
+      "id": 5,
+      "name": "romano",
+      "address": "Da Nang",
+      "cost": 2000,
+      "currency": "Chai"
+    },
+    {
+      "id": 6,
+      "name": "clear men",
+      "address": "Da Nang",
+      "cost": 2000,
+      "currency": "Thung"
+    }
+  ],
+  "packages": [
+    {
+      "id": 2,
+      "idPackage": "LH-0002",
+      "product": {
+        "id": 6,
+        "name": "clear men",
+        "address": "Da Nang",
+        "cost": 2000,
+        "currency": "Thung"
+      },
+      "quantity": 2,
+      "dateProduct": "2020-12-08",
+      "startDate": "2020-12-15",
+      "endDate": "2021-12-08"
+    },
+    {
+      "id": 3,
+      "idPackage": "LH-0003",
+      "product": {
+        "id": 5,
+        "name": "romano",
+        "address": "Da Nang",
+        "cost": 2000,
+        "currency": "Chai"
+      },
+      "quantity": 2,
+      "dateProduct": "2020-12-08",
+      "startDate": "2020-12-15",
+      "endDate": "2021-12-08"
+    },
+    {
+      "idPackage": "LH-3333",
+      "product": {
+        "id": 1,
+        "name": "sting",
+        "address": "Da Nang",
+        "cost": 1000,
+        "currency": "Thung"
+      },
+      "quantity": 2,
+      "dateProduct": "2022-09-14",
+      "startDate": "2022-09-23",
+      "endDate": "2022-09-28",
+      "id": 4
+    },
+    {
+      "idPackage": "LH-4444",
+      "product": {
+        "id": 3,
+        "name": "red bull",
+        "address": "Quang Nam",
+        "cost": 3000,
+        "currency": "Thung"
+      },
+      "quantity": 333,
+      "dateProduct": "2022-09-14",
+      "startDate": "2022-09-16",
+      "endDate": "2022-09-17",
+      "id": 6
+    },
+    {
+      "idPackage": "LH-5555",
+      "product": {
+        "id": 4,
+        "name": "clear",
+        "address": "Da Nang",
+        "cost": 2000,
+        "currency": "Chai"
+      },
+      "quantity": 3,
+      "dateProduct": "2022-09-16",
+      "startDate": "2022-09-19",
+      "endDate": "2022-09-27",
+      "id": 7
+    },
+    {
+      "idPackage": "LH-1111",
+      "product": {
+        "id": 2,
+        "name": "7up",
+        "address": "Da Nang",
+        "cost": 2000,
+        "currency": "Chai"
+      },
+      "quantity": 2,
+      "dateProduct": "2022-09-30",
+      "startDate": "2022-09-21",
+      "endDate": "2022-10-01",
+      "id": 8
+    },
+    {
+      "idPackage": "LH-8888",
+      "product": {
+        "id": 3,
+        "name": "red bull",
+        "address": "Quang Nam",
+        "cost": 3000,
+        "currency": "Thung"
+      },
+      "quantity": 6,
+      "dateProduct": "2022-09-21",
+      "startDate": "2022-09-16",
+      "endDate": "2022-09-29",
+      "id": 10
+    },
+    {
+      "idPackage": "LH-4321",
+      "product": {
+        "id": 1,
+        "name": "sting",
+        "address": "Da Nang",
+        "cost": 1000,
+        "currency": "Thung"
+      },
+      "quantity": 3,
+      "dateProduct": "2022-09-14",
+      "startDate": "2022-09-08",
+      "endDate": "2022-09-16",
+      "id": 11
+    }
+  ]
+}

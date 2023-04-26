@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
-import {CategoryService} from "../../service/category.service";
-import {Router} from "@angular/router";
-import {Category} from "../../model/category";
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
+import {CategoryService} from '../../service/category.service';
+import {Router} from '@angular/router';
+import {Category} from '../../model/category';
 
 @Component({
   selector: 'app-category-create',
@@ -12,7 +12,7 @@ import {Category} from "../../model/category";
 export class CategoryCreateComponent implements OnInit {
   categoryForm = new FormControl;
 
-  constructor(private categoryService: CategoryService,private router: Router) {
+  constructor(private categoryService: CategoryService, private router: Router) {
 
   }
 
@@ -22,8 +22,12 @@ export class CategoryCreateComponent implements OnInit {
   submit() {
     const name = this.categoryForm.value;
     const newCategory: Category = new class implements Category {
-      name = name
-    }
-    this.categoryService.createCategory(newCategory).subscribe(() => {}, ()=>{}, ()=>{this.router.navigateByUrl('/category/list')})
+      name = name;
+    };
+    this.categoryService.createCategory(newCategory).subscribe(() => {
+    }, () => {
+    }, () => {
+      this.router.navigateByUrl('/category/list');
+    });
   }
 }

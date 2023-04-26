@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {CategoryService} from "../../service/category.service";
-import {Category} from "../../model/category";
-import {FormControl} from "@angular/forms";
+import {CategoryService} from '../../service/category.service';
+import {Category} from '../../model/category';
+import {FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-category-list',
@@ -28,12 +28,12 @@ export class CategoryListComponent implements OnInit {
   }
 
   delCategory() {
-    this.categoryService.deleteCategory(this.deleteCategory.id).subscribe(() =>{}, () =>{}, ()=>{this.ngOnInit()})
+    this.categoryService.deleteCategory(this.deleteCategory.id).subscribe(() => {}, () => {}, () => {this.ngOnInit(); });
   }
 
   search() {
     const text = this.searchForm.value;
     this.categoryService.search(text).subscribe(results => this.categories = results);
-    console.log(text)
+    console.log(text);
   }
 }

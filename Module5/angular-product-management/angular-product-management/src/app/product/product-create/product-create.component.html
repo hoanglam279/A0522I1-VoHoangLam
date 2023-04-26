@@ -1,0 +1,60 @@
+<h1 class="mt-4 ml-4 mb-5 text-center">Tạo sản phẩm mới</h1>
+<h4 class="mt-4 ml-4 mb-5 text-center text-danger">{{message}}</h4>
+<form [formGroup]="productForm" (ngSubmit)="submit()">
+  <table class="table table-info container" style="width: 800px;">
+<!--    <tr>-->
+<!--      <td>Mã sản phẩm:</td>-->
+<!--      <td><input type="number" formControlName="id"></td>-->
+<!--    </tr>-->
+    <tr>
+      <td>Tên sản phẩm:</td>
+      <td><input type="text" formControlName="name" placeholder="tên phải dài hơn 6 kí tự"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <a *ngIf=" productForm.controls.name.invalid && (productForm.controls.name.dirty || productForm.controls.name.touched)" style="color: red">tên phải dài hơn 6 kí tự</a>
+      </td>
+    </tr>
+    <tr>
+      <td>Giá sản phẩm</td>
+      <td><input type="number" formControlName="price" placeholder=">0"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <a *ngIf=" productForm.controls.price.invalid && (productForm.controls.price.dirty || productForm.controls.price.touched)" style="color: red">giá phải lớn hơn 0</a>
+      </td>
+    </tr>
+    <tr>
+      <td>Hãng</td>
+      <td>
+        <select style="width: 140px;" formControlName="category">
+        <option *ngFor="let item of categorys"  [ngValue]="item">
+          {{item.name}}
+        </option>
+      </select>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <a *ngIf=" productForm.controls.category.invalid && (productForm.controls.category.dirty || productForm.controls.category.touched)" style="color: red">hãng không được để trống</a>
+      </td>
+    </tr>
+    <tr>
+      <td>Mô tả về sản phẩm</td>
+      <td><input type="text" formControlName="description"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <a *ngIf=" productForm.controls.description.invalid && (productForm.controls.description.dirty || productForm.controls.description.touched)" style="color: red">mô tả không được trống và lớn hơn 6 kí tự</a>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button class="btn btn-primary">Tạo mới</button></td>
+    </tr>
+  </table>
+</form>

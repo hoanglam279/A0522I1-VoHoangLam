@@ -1,0 +1,72 @@
+<div class="container mt-5">
+  <h1 class="font-text-footer" style="text-align: -webkit-center;">Nhập hàng</h1>
+  <form [formGroup]="packageForm" (ngSubmit)="createPackage()">
+    <small class="text-danger mb-0 pb-0"
+           *ngIf="packageForm.get('idPackage').invalid && (packageForm.get('idPackage').touched||packageForm.get('idPackage').dirty)">
+      Mã lô hàng không hợp lệ!! phải có định dạng LH-XXXX với X là số nguyên dương
+    </small>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Mã lô hàng</span>
+      <input type="text" class="form-control me-2" placeholder="Mã lô hàng" formControlName="idPackage">
+    </div>
+
+    <small class="text-danger mb-0 pb-0"
+           *ngIf="packageForm.get('product').invalid && (packageForm.get('product').touched||packageForm.get('product').dirty)">
+      Sản phẩm Không hợp lệ!
+    </small>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Sản phẩm</span>
+      <select class="me-2" formControlName="product">
+        <option selected disabled value="">Chọn</option>
+        <option *ngFor="let product of products" [ngValue]="product">{{product.name}}</option>
+      </select>
+    </div>
+
+    <small class="text-danger mb-0 pb-0"
+           *ngIf="packageForm.get('quantity').invalid && (packageForm.get('quantity').touched||packageForm.get('quantity').dirty)">
+      Số lượng không hợp lệ!!
+    </small>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Số lượng</span>
+      <input type="number" class="form-control me-2" placeholder="Số lượng" formControlName="quantity">
+    </div>
+
+    <small class="text-danger mb-0 pb-0"
+           *ngIf="packageForm.get('dateProduct').invalid && (packageForm.get('dateProduct').touched||packageForm.get('dateProduct').dirty)">
+      Ngày nhập hàng không hợp lệ!!
+    </small>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Ngày nhập hàng</span>
+      <input type="date" class="form-control me-2" placeholder="Ngày nhập hàng" formControlName="dateProduct">
+    </div>
+
+    <small class="text-danger mb-0 pb-0"
+           *ngIf="packageForm.get('startDate').invalid && (packageForm.get('startDate').touched||packageForm.get('startDate').dirty)">
+      Ngày Sản xuất không hợp lệ!!
+    </small>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Ngày Sản xuất</span>
+      <input type="date" class="form-control me-2" placeholder="Ngày Sản xuất" formControlName="startDate">
+    </div>
+
+    <small class="text-danger mb-0 pb-0"
+           *ngIf="packageForm.get('endDate').invalid && (packageForm.get('endDate').touched||packageForm.get('endDate').dirty)">
+      Ngày hết hạn không hợp lệ!!
+    </small>
+    <div class="input-group mb-3">
+      <span class="input-group-text">Ngày hết hạn</span>
+      <input type="date" class="form-control me-2" placeholder="Ngày hết hạn" formControlName="endDate">
+    </div>
+    <div *ngIf="packageForm.hasError('dateError')" class="alert alert-danger" role="alert">
+      Ngày sản xuất phải trước ngày hết hạn, và ngày nhập hàng, ngày sản xuất phải trước ngày hết hạn
+    </div>
+    <br>
+    <div class="input-group d-flex align-content-center justify-content-center">
+      <button type="submit" class="btn btn-primary" [disabled]="packageForm.invalid">Create</button>
+      <button type="button" class="btn btn-danger ms-3"><a style="text-decoration: none"
+                                                           class="text-light"
+                                                           routerLink=''>Huỷ</a>
+      </button>
+    </div>
+  </form>
+</div>

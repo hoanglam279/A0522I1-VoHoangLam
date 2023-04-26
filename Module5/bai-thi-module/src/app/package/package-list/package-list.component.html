@@ -1,0 +1,105 @@
+<div class="container">
+  <div>
+    <h1 class="font-text-footer" style="text-align: -webkit-center;">Package List</h1>
+    <br>
+    <!--    +++++++++search++++++++++++++++-->
+        <form [formGroup]="packageSearch" (ngSubmit)="searchPackage()" class="mb-3">
+          <div class="row">
+            <div class="input-group col-md-3">
+              <span class="input-group-text">Name sản phẩm</span>
+              <select class="me-2" formControlName="productId" style="width: auto">
+                <option selected value="">Chọn</option>
+                <option *ngFor="let product of products"
+                        value="{{product.id}}">{{product.name}}</option>
+              </select>
+            </div>
+            <div class="input-group col-md-4">
+              <span class="input-group-text">Ngày hết hạn</span>
+              <input type="date" class="form-control me-2" placeholder="Ngày hết hạn" formControlName="endDate">
+            </div>
+
+            <div class="input-group col-md-4">
+              <span class="input-group-text">Ngày nhập hàng 1</span>
+              <input type="date" class="form-control me-2" placeholder="Ngày sản xuất" formControlName="dateProduct1">
+            </div>
+
+            <div class="input-group col-md-4 mt-3">
+              <span class="input-group-text">Ngày nhập hàng 2 </span>
+              <input type="date" class="form-control me-2" placeholder="Ngày sản xuất" formControlName="dateProduct2">
+            </div>
+            <div class="col-md-1">
+              <button class="btn btn-outline-success mt-3" type="submit">Search</button>
+            </div>
+          </div>
+        </form>
+    <br>
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+        <button type="button" class="btn btn-secondary" routerLink="/package/create">Nhập Hàng</button>
+        <tr>
+          <th>Mã lô hàng</th>
+          <th>Tên sản phẩm</th>
+          <th>Giá tiền</th>
+          <th>Đơn vị</th>
+          <th>Số lượng</th>
+          <th>Ngày nhập hàng</th>
+          <th>Ngày sản xuất</th>
+          <th>Ngày hết hạn</th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let package of packages | paginate: {itemsPerPage: 3, currentPage: page, totalItems: totalLength}">
+          <th>{{package.idPackage}}</th>
+          <td>{{package.product.name}}</td>
+          <td>{{package.product.cost}}</td>
+          <td>{{package.product.currency}}</td>
+          <td>{{package.quantity}}</td>
+          <td>{{package.dateProduct|date:"dd/MM/yyyy"}}</td>
+          <td>{{package.startDate|date:"dd/MM/yyyy"}}</td>
+          <td>{{package.endDate|date:"dd/MM/yyyy"}}</td>
+          <td>
+            <button type="button"
+                    (click)="showInfo(package)"
+                    class="btn btn-danger"
+                    data-toggle="modal"
+                    data-target="#customerModal">
+              Xoá
+            </button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div>
+    <pagination-controls (pageChange)="page = $event"></pagination-controls>
+  </div>
+</div>
+
+<!--+++++++++++++++modal+++++++++++++++++=-->
+<!-- Modal -->
+<div class="modal fade" id="customerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title text-danger" id="exampleModalLabel">Xác nhận xoá</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">x</button>
+      </div>
+      <div class="modal-body">
+        <h2>Bạn có chắc chắn xoá thông tin lô hàng {{packageTemp.product.name}} nhập
+          ngày {{packageTemp.dateProduct| date:"dd/MM/yyyy"}} ?</h2>
+      </div>
+      <div class="modal-footer">
+        <div style="position: absolute; left: 18px;">
+          <h6 class="text-danger">Lưu ý! Hành động không thể hoàn
+            tác!</h6>
+        </div>
+        <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="delete(packageTemp.id)">Delete
+        </button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

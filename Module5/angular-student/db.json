@@ -1,0 +1,37 @@
+{
+  "car": [
+    {
+      "id": 1811505313,
+      "typeCar": "xe bo",
+      "garageName": "huyndai",
+      "starLocation": "Quang Nam",
+      "endLocation": "Da Nang",
+      "phone": "0951234567",
+      "email": "dut@gmail.com",
+      "startTime": "13:20",
+      "endTime": "22:00"
+    },
+    {
+      "id": 1811505314,
+      "typeCar": "mec",
+      "garageName": "mecxedec",
+      "starLocation": "Ha Noi",
+      "endLocation": "Da Nang",
+      "phone": "0951234567",
+      "email": "dut@gmail.com",
+      "startTime": "12:20",
+      "endTime": "15:00"
+    },
+    {
+      "id": 1811505315,
+      "typeCar": "may bay",
+      "garageName": "vo lam",
+      "starLocation": "Mai Linh",
+      "endLocation": "Da Nang",
+      "phone": "0951234567",
+      "email": "dut@gmail.com",
+      "startTime": "13:20",
+      "endTime": "15:00"
+    }
+  ]
+}

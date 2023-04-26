@@ -1,0 +1,82 @@
+<div class="col-md-9">
+  <form [formGroup]="searchForm" (ngSubmit)="search()">
+    Tên sản phẩm:
+    <input type="text" formControlName="productName">
+    Ngày sản xuất:
+    <input type="date" formControlName="outDate">
+    Ngày nhập hàng:
+    <input type="date" formControlName="inDate">
+    Ngày hết hạn:
+    <input type="date" formControlName="expDate">
+    <br>
+    <button class="btn btn-outline-dark m-2">Tìm kiếm</button>
+    <button type="button" (click)="reset()" class="btn btn-outline-dark">Reset</button>
+  </form>
+</div>
+
+<br><br>
+
+<h1>Danh sách lô hàng</h1>
+<a routerLink="/package-create" class="btn btn-outline-dark">Nhập hàng</a>
+<div>
+  <table class="table table-striped">
+    <tr>
+      <th>Mã lô hàng</th>
+      <th>Tên sản phẩm</th>
+      <th>Hình ảnh</th>
+      <th>Giá</th>
+      <th>Đơn vị</th>
+      <th>Số lượng</th>
+      <th>Ngày nhập hàng</th>
+      <th>Ngày sản xuất</th>
+      <th>Ngày hết hạn</th>
+      <th>Sửa</th>
+      <th>Xóa</th>
+    </tr>
+    <tr *ngFor="let pck of packages | paginate : config">
+      <td>{{pck.packageCode}}</td>
+      <td>{{pck.product.name}}</td>
+      <td style="width: 100px;height: 100px">
+        <img src="{{pck.product.image}}" alt="Hình ảnh sản phẩm"  class="img-fluid">
+      </td>
+      <td>{{pck.product.price}}</td>
+      <td>{{pck.product.unit}}</td>
+      <td>{{pck.quantity}}</td>
+      <td>{{pck.inDate}}</td>
+      <td>{{pck.outDate}}</td>
+      <td>{{pck.expDate}}</td>
+      <td><a class="btn btn-outline-dark" [routerLink]="['/package-edit', pck.id]">Sửa</a></td>
+      <td><a class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#delModal"
+             (click)="delModal(pck)">Xóa</a></td>
+    </tr>
+  </table>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="delModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Xác nhận</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Xác nhận xóa lô hàng {{delPack.packageCode}} nhập ngày {{delPack.inDate}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+        <button type="button" class="btn btn-primary" (click)="delpck()" data-bs-dismiss="modal">Xóa</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end modal-->
+
+<div *ngIf="toggle=='allPackage'">
+  <pagination-controls (pageChange)="pageChanged($event)" previousLabel="Trang trước"
+                       nextLabel="Trang sau"></pagination-controls>
+</div>
+<div *ngIf="toggle=='searchPackage'">
+  <pagination-controls (pageChange)="searchChanged($event)" previousLabel="Trang trước"
+                       nextLabel="Trang sau"></pagination-controls>
+</div>

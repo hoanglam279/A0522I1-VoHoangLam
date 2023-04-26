@@ -1,0 +1,109 @@
+<h2>Sua thong tin xe</h2>
+<div class="col-6">
+  <form [formGroup]="carEditForm" (ngSubmit)="update()">
+
+    <div class="form-group">
+      <label>Loai xe:</label>
+      <input class="form-control" type="text" formControlName="typeCar">
+      <div
+        *ngIf="carEditForm.get('typeCar')?.invalid && (carEditForm.get('typeCar')?.touched || carEditForm.get('typeCar')?.dirty)">
+        <div [hidden]="!carEditForm.get('typeCar').errors.required">
+          <small style="color: red">Loai xe khong duoc de trong</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Ten nha xe:</label>
+      <input class="form-control" type="text" formControlName="garageName">
+      <div
+        *ngIf="carEditForm.get('garageName')?.invalid && (carEditForm.get('garageName')?.touched || carEditForm.get('garageName')?.dirty)">
+        <div [hidden]="!carEditForm.get('garageName').errors.required">
+          <small style="color: red">Ten nha xe khong duoc de trong</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Diem di:</label>
+      <input class="form-control" type="text" formControlName="starLocation">
+      <div
+        *ngIf="carEditForm.get('starLocation')?.invalid && (carEditForm.get('starLocation')?.touched || carEditForm.get('starLocation')?.dirty)">
+        <div [hidden]="!carEditForm.get('starLocation').errors.required">
+          <small style="color: red">dia diem di khong duoc de trong</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Diem den:</label>
+      <input class="form-control" type="text" formControlName="endLocation">
+      <div
+        *ngIf="carEditForm.get('endLocation')?.invalid && (carEditForm.get('endLocation')?.touched || carEditForm.get('endLocation')?.dirty)">
+        <div [hidden]="!carEditForm.get('endLocation').errors.required">
+          <small style="color: red">dia diem den khong duoc de trong</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>SDT:</label>
+      <input class="form-control" type="text" formControlName="phone">
+      <div
+        *ngIf="carEditForm.get('phone')?.invalid && (carEditForm.get('phone')?.touched || carEditForm.get('phone')?.dirty)">
+        <div [hidden]="!carEditForm.get('phone').errors.required">
+          <small style="color: red">So dien thoai khong duoc de trong</small>
+        </div>
+      </div>
+      <div
+        *ngIf="carEditForm.get('phone')?.invalid && (carEditForm.get('phone')?.touched || carEditForm.get('phone')?.dirty)">
+        <div [hidden]="!carEditForm.get('phone').errors.pattern">
+          <small style="color: red">So dien thoai phai dung dinh dang 10 so</small>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Email:</label>
+        <input class="form-control" type="text" formControlName="email">
+        <div
+          *ngIf="carEditForm.get('email')?.invalid && (carEditForm.get('email')?.touched || carEditForm.get('email')?.dirty)">
+          <div [hidden]="!carEditForm.get('email').errors.required">
+            <small style="color: red">Email khong duoc de trong</small>
+          </div>
+        </div>
+        <div
+          *ngIf="carEditForm.get('email')?.invalid && (carEditForm.get('email')?.touched || carEditForm.get('email')?.dirty)">
+          <div [hidden]="!carEditForm.get('email').errors.pattern">
+            <small style="color: red">Email phai dung dinh dang acb@def.com</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Gio di:</label>
+        <input class="form-control" type="time" formControlName="startTime">
+        <div
+          *ngIf="carEditForm.get('startTime')?.invalid && (carEditForm.get('startTime')?.touched || carEditForm.get('startTime')?.dirty)">
+          <div [hidden]="!carEditForm.get('startTime').errors.required">
+            <small style="color: red">Gio di khong duoc de trong</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Gio den:</label>
+      <input class="form-control" type="time" formControlName="endTime">
+      <div
+        *ngIf="carEditForm.get('endTime')?.invalid && (carEditForm.get('endTime')?.touched || carEditForm.get('endTime')?.dirty)">
+        <div [hidden]="!carEditForm.get('endTime').errors.required">
+          <small style="color: red">Gio den khong duoc de trong</small>
+        </div>
+      </div>
+    </div>
+
+    <button style="margin-right: 20px" type="button" class="btn btn-outline-dark" routerLink="">Back</button>
+    <button class="btn btn-success" type="submit">Update</button>
+    <button style="margin-left: 20px" class="btn btn-warning" type="reset">Reset</button>
+  </form>
+</div>

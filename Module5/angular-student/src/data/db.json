@@ -1,0 +1,54 @@
+{
+  "student": [
+    {
+      "id": 1,
+      "name": "A",
+      "group": "Nhom 1",
+      "detail": "Cong nghe thong tin",
+      "email": "a@gmail.com",
+      "phone": "0951234567",
+      "teacher": {
+        "id": 3,
+        "name": "Nguyen F"
+      }
+    },
+    {
+      "id": 2,
+      "name": "",
+      "group": "Nhom 2",
+      "detail": "Moi truong",
+      "email": "acb@def.com",
+      "phone": "0914789654",
+      "teacher": {
+        "id": 2,
+        "name": "Le D"
+      }
+    },
+    {
+      "id": 3,
+      "name": "E",
+      "group": "Nhom 3",
+      "detail": "An toan giao thong",
+      "email": "e@gmail.com",
+      "phone": "0351234568",
+      "teacher": {
+        "id": 3,
+        "name": "Nguyen F"
+      }
+    }
+  ],
+  "teacher": [
+    {
+      "id": 1,
+      "name": "Nguyen Thanh Cong"
+    },
+    {
+      "id": 2,
+      "name": "Truong Tan Hai"
+    },
+    {
+      "id": 3,
+      "name": "Nguyen Mai Huyen Linh"
+    }
+  ]
+}

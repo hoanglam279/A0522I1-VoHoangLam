@@ -1,0 +1,34 @@
+{
+  "packages": [
+    {
+      "packageCode": "LH-1111",
+      "product": {
+        "id": 3,
+        "name": "name 1",
+        "price": 1000,
+        "unit": "unit"
+      },
+      "quantity": 1,
+      "dateGroup": {
+        "inDate": "2022-09-22",
+        "outDate": "2022-09-15",
+        "expDate": "2022-09-29"
+      },
+      "id": 7
+    }
+  ],
+  "products": [
+    {
+      "id": 3,
+      "name": "name 1",
+      "price": 1000,
+      "unit": "unit"
+    },
+    {
+      "id": 2,
+      "name": "name 2",
+      "price": 1000,
+      "unit": "unit"
+    }
+  ]
+}

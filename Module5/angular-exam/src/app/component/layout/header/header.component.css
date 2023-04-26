@@ -1,0 +1,8 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+nav {
+  position: sticky;
+  top: 0px;
+}

@@ -1,0 +1,42 @@
+<h1 class="text-center mt-4 mb-5">Cập nhật sản phẩm</h1>
+<form [formGroup]="productForm" (ngSubmit)="submit()">
+  <table class="table table-info container" style="width: 800px;" >
+    <tr>
+      <td>Mã sản phẩm:</td>
+      <td ><input type="number"  disabled formControlName="id"></td>
+<!--      [(ngModel)]="product.id"-->
+    </tr>
+    <tr>
+      <td>Tên sản phẩm:</td>
+      <td><input type="text"  formControlName="name"></td>
+<!--      [(ngModel)]="product.name"-->
+    </tr>
+    <tr>
+      <td>Giá sản phẩm</td>
+      <td><input type="number"  formControlName="price"></td>
+<!--      [(ngModel)]="product.price"-->
+    </tr>
+    <tr>
+      <td>Hãng</td>
+      <td>
+        <select formControlName="category" >
+          <option *ngFor="let item of categorys" [ngValue]="item" [selected]="item.name ==tesst" >
+            {{item.name}}
+          </option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Mô tả về sản phẩm</td>
+      <td><input type="text"  formControlName="description"></td>
+<!--      [(ngModel)]="product.description"-->
+    </tr>
+    <tr >
+      <td></td>
+      <td>
+        <button (click)="Back()" class="btn btn-primary mr-5">Quay lại</button>
+        <button (click)="submit()" class="btn btn-warning">Cập nhật</button>
+      </td>
+    </tr>
+  </table>
+</form>

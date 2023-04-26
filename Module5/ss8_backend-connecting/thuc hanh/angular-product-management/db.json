@@ -5,10 +5,10 @@
       "name": "222",
       "price": 222,
       "description": "222",
-      "categoryId": 4,
+      "categoryId": 3,
       "category": {
-        "id": 4,
-        "name": "Other"
+        "id": 3,
+        "name": "ABC"
       }
     },
     {
@@ -21,6 +21,20 @@
         "id": 4,
         "name": "Other"
       }
+    },
+    {
+      "name": null,
+      "price": null,
+      "description": null,
+      "category": null,
+      "id": 3
+    },
+    {
+      "name": null,
+      "price": null,
+      "description": null,
+      "category": null,
+      "id": 4
     }
   ],
   "categories": [

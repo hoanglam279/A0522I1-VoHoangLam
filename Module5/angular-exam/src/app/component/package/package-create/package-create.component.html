@@ -1,0 +1,40 @@
+<h1>Tạo lô hàng mới</h1>
+<form [formGroup]="packageForm" (ngSubmit)="submit()">
+  <div class="col-md-6">
+    <label class="form-label"  >Mã sản phẩm</label>
+    <input class="form-control" type="text" formControlName="packageCode">
+    <p class="text-warning" *ngIf="packageForm.get('packageCode')?.invalid && packageForm.get('packageCode')?.touched">Không hợp lệ</p>
+  </div>
+  <div class="col-md-4">
+    <label class="form-label"  >Sản phẩm</label>
+    <select class="form-select" formControlName="product">
+      <option selected [value]="null">Chọn</option>
+      <option *ngFor="let product of products" [ngValue]="product.id">{{product.name}}</option>
+    </select>
+    <p class="text-warning" *ngIf="packageForm.get('product')?.invalid && packageForm.get('product')?.touched">Không hợp lệ</p>
+  </div>
+  <div class="col-md-6">
+    <label class="form-label"  >Số lượng</label>
+    <input class="form-control" type="number" formControlName="quantity">
+    <p class="text-warning" *ngIf="packageForm.get('quantity')?.invalid && packageForm.get('quantity')?.touched">Không hợp lệ</p>
+  </div>
+<div formGroupName="dateGroup">
+  <div class="col-md-6">
+    <label class="form-label"  >Ngày sản xuất</label>
+    <input class="form-control" type="date" formControlName="outDate">
+  </div>
+  <div class="col-md-6">
+    <label class="form-label"  >Ngày nhập hàng</label>
+    <input class="form-control" type="date" formControlName="inDate">
+  </div>
+  <div class="col-md-6">
+    <label class="form-label"  >Ngày hết hạn</label>
+    <input class="form-control" type="date" formControlName="expDate">
+  </div>
+  <p class="text-warning" *ngIf="packageForm.hasError('invalidDate',['dateGroup']) && packageForm.get('dateGroup')?.touched">Không hợp lệ</p>
+</div>
+  <div class="col-md-6">
+    <button type="button" class="btn btn-outline-dark" routerLink="/package-list">Quay lại danh sách</button>
+    <button type="submit" class="btn btn-outline-dark" [disabled]="packageForm.invalid">Tạo lô hàng mới</button>
+  </div>
+</form>

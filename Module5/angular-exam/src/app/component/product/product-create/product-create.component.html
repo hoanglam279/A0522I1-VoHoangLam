@@ -1,0 +1,27 @@
+<h1>Tạo sản phẩm mới</h1>
+<form [formGroup]="productForm" (ngSubmit)="submit()">
+  <div class="col-md-6">
+    <label class="form-label"  >Tên sản phẩm</label>
+    <input class="form-control" type="text" formControlName="name">
+  </div>
+  <div class="col-md-6">
+    <label class="form-label"  >Xuất xứ</label>
+    <input class="form-control" type="text" formControlName="source">
+  </div>
+    <div class="col-md-6">
+      <label class="form-label"  >Giá</label>
+      <input class="form-control" type="number" formControlName="price">
+    </div>
+    <div class="col-md-6">
+      <label class="form-label"  >Đơn vị</label>
+      <input class="form-control" type="text" formControlName="unit">
+    </div>
+    <div class="col-md-6">
+      <label class="form-label"  >Hình ảnh</label>
+      <input class="form-control" type="text" formControlName="image">
+    </div>
+  <div class="col-md-6 mt-5">
+    <button type="button" class="btn btn-outline-dark" routerLink="/package-list">Quay lại danh sách</button>
+    <button type="submit" class="btn btn-outline-dark">Tạo sản phẩm mới</button>
+  </div>
+</form>
